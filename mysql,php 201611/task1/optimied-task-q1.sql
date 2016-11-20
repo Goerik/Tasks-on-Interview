@@ -16,10 +16,7 @@ SELECT 2 as id
 UNION ALL
 SELECT 3 as id;
 
-
--- ALTER TABLE `mydb`.`likes` 
--- ADD INDEX `users_posts` USING BTREE (`users_id` ASC, `posts_id` ASC);
-
+-- Main query
 
 SELECT  posts.id, posts.text, likes.id as like_id
 FROM posts
