@@ -16,7 +16,9 @@ SELECT 2 as id
 UNION ALL
 SELECT 3 as id;
 
--- Main query
+
+-- main query
+
 
 SELECT  posts.id, posts.text, likes.id as like_id
 FROM posts
@@ -27,7 +29,7 @@ LEFT JOIN likes
 		)
 INNER JOIN 
 (
-SELECT posts_id 
+SELECT DISTINCT posts_id 
 		FROM post_categories
         INNER JOIN posts_with_categories
         ON (posts_with_categories.id) = post_categories.categories_id
